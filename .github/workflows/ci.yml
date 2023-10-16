@@ -68,14 +68,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       
-      # Determining hte target URL can for example be done in a separate step like this
+      # Determining the target URL can for example be done in a separate step like this
       - name: Determine base url
         id: determine_url
         run: |
           echo "Determining base URL according to some criteria..."
           echo "BASE_URL="site1"" >> $GITHUB_ENV
           
-      # Placeholder - this step would be some action or run commands that deploys the code
+      # This step would be some action or run commands that deploys the code
       - name: Deploy to test env
         if: ${{ success() }}
         run: |
